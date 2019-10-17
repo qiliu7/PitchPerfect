@@ -99,19 +99,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S6T-Mg-VQe">
                                         <rect key="frame" x="0.0" y="241.5" width="414" height="166.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-u8-M7B" userLabel="Low Pitch Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="166.5"/>
-                                                <state key="normal" image="LowPitch"/>
-                                                <connections>
-                                                    <action selector="playSoundForButton:" destination="Xyd-1R-U8l" eventType="touchUpInside" id="mNZ-JS-eyf"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rkN-Yb-Umo" userLabel="High Pitch Button">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="166.5"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="Xyd-1R-U8l" eventType="touchUpInside" id="KfA-B2-dqC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-u8-M7B" userLabel="Low Pitch Button">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="166.5"/>
+                                                <state key="normal" image="LowPitch"/>
+                                                <connections>
+                                                    <action selector="playSoundForButton:" destination="Xyd-1R-U8l" eventType="touchUpInside" id="mNZ-JS-eyf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
