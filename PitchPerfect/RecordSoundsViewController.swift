@@ -12,6 +12,7 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   
   let stopRecordingSegueID = "stopRecording"
+  
   var audioRecorder: AVAudioRecorder!
   
   @IBOutlet weak var recordingLabel: UILabel!
@@ -21,9 +22,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     stopRecordingButton.isEnabled = false
-    // Do any additional setup after loading the view.
   }
-
 
   @IBAction func recordAudio(_ sender: Any) {
     recordingLabel.text = "Recording in Progress"

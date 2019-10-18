@@ -65,10 +65,10 @@
 				B1B6BFDF23550CCF000608A7 /* Main.storyboard */,
 				B1B6BFED2356C25F000608A7 /* RecordSoundsViewController.swift */,
 				B1B6BFEF2358896F000608A7 /* PlaySoundsViewController.swift */,
+				B1B6BFF32358BDBD000608A7 /* PlaySoundsViewController+Audio.swift */,
 				B1B6BFE223550CD1000608A7 /* Assets.xcassets */,
 				B1B6BFE423550CD1000608A7 /* LaunchScreen.storyboard */,
 				B1B6BFE723550CD1000608A7 /* Info.plist */,
-				B1B6BFF32358BDBD000608A7 /* PlaySoundsViewController+Audio.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";

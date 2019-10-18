@@ -11,6 +11,15 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
   
+  // MARK: - Constants
+  struct AudioPlaybackSetting {
+    
+    static let slowRate: Float = 0.5
+    static let fastRate: Float = 1.5
+    static let highPitch: Float = 1000
+    static let lowPitch: Float = -1000
+  }
+  
   // MARK: - Outlets
   @IBOutlet weak var snailButton: UIButton!
   @IBOutlet weak var rabbitButton: UIButton!
@@ -38,7 +47,7 @@ class PlaySoundsViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    // set buttons' image content mode to prevent from stretching
+    // set button image content mode to prevent stretching
     let playBackButtons = [snailButton, rabbitButton, vaderButton, chipmunkButton, echoButton, reverbButton]
     for button in playBackButtons {
       button?.setToFixAspectRatio()
@@ -48,24 +57,33 @@ class PlaySoundsViewController: UIViewController {
   
   // MARK: - Actions
   @IBAction func playSoundForButton(_ sender: UIButton) {
-    print(" is pressed")
+    switch(ButtonType(rawValue: sender.tag)! ) {
+    case .slow:
+      playSound(rate: AudioPlaybackSetting.slowRate)
+    case .fast:
+      playSound(rate: AudioPlaybackSetting.fastRate)
+    case .chipmunk:
+      playSound(pitch: AudioPlaybackSetting.highPitch)
+    case .vader:
+      playSound(pitch: AudioPlaybackSetting.lowPitch)
+    case .echo:
+      playSound(echo: true)
+    case .reverb:
+      playSound(reverb: true)
+    }
+    configureUI(.playing)
   }
   
   @IBAction func stopButtonPressed(_ sender: UIButton) {
-    print("stop button is pressed")
+    stopAudio()
   }
 
 }
 
 extension UIButton {
-  
-//  convenience init(imageContentMode: UIImageView.ContentMode = .scaleAspectFit) {
-//    self.init()
-//    self.imageView?.contentMode = imageContentMode
-//  }
-  
+
   func setToFixAspectRatio() {
-    self.imageView?.contentMode = .scaleAspectFill
+    self.imageView?.contentMode = .scaleAspectFit
   }
 }
 
