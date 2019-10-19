@@ -77,11 +77,9 @@ class PlaySoundsViewController: UIViewController {
   @IBAction func stopButtonPressed(_ sender: UIButton) {
     stopAudio()
   }
-
 }
 
 extension UIButton {
-
   func setToFixAspectRatio() {
     self.imageView?.contentMode = .scaleAspectFit
   }

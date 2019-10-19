@@ -101,7 +101,7 @@
                                         <rect key="frame" x="0.0" y="219" width="414" height="211"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rkN-Yb-Umo" userLabel="High Pitch Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="203" height="211.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="211"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
@@ -118,7 +118,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" id="29C-QL-YCJ">
-                                        <rect key="frame" x="0.0" y="438.5" width="414" height="211"/>
+                                        <rect key="frame" x="0.0" y="438" width="414" height="211"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-VE-HEL" userLabel="Echo Button">
