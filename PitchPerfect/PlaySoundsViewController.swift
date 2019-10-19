@@ -28,6 +28,7 @@ class PlaySoundsViewController: UIViewController {
   @IBOutlet weak var echoButton: UIButton!
   @IBOutlet weak var reverbButton: UIButton!
   @IBOutlet weak var stopButton: UIButton!
+  var playBackButtons = [UIButton]()
   
   var recordedAudioURL: URL!
   var audioFile: AVAudioFile!
@@ -47,10 +48,10 @@ class PlaySoundsViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    // set button image content mode to prevent stretching
-    let playBackButtons = [snailButton, rabbitButton, vaderButton, chipmunkButton, echoButton, reverbButton]
+    // set button image content mode to prevent from stretching
+    playBackButtons = [snailButton, rabbitButton, vaderButton, chipmunkButton, echoButton, reverbButton]
     for button in playBackButtons {
-      button?.setToFixAspectRatio()
+      button.setToFixAspectRatio()
     }
     configureUI(.notPlaying)
   }
